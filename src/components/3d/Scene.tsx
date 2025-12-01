@@ -1,14 +1,25 @@
 'use client'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial, Float } from '@react-three/drei'
-import { useRef, useState } from 'react'
+import { useRef, useMemo } from 'react'
 import { inSphere } from 'maath/random'
 
 function Particles(props: any) {
     const ref = useRef<any>()
-    const [sphere] = useState(() => 
-        inSphere(new Float32Array(5000), { radius: 1.5 })
-    )
+
+    // Generate and validate particle positions
+    const sphere = useMemo(() => {
+        const positions = inSphere(new Float32Array(5000), { radius: 1.5 })
+
+        // Validate and replace any NaN values with 0
+        for (let i = 0; i < positions.length; i++) {
+            if (isNaN(positions[i]) || !isFinite(positions[i])) {
+                positions[i] = 0
+            }
+        }
+
+        return positions
+    }, [])
 
     useFrame((_, delta) => {
         if (ref.current) {
