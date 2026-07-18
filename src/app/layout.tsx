@@ -1,31 +1,38 @@
-import type { Metadata } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
-import './globals.css'
-import CustomCursor from '@/components/ui/CustomCursor'
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-space-grotesk'
-})
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Creative Developer',
-  description: 'High-end cinematic portfolio',
-}
+  title: "PhotoMarket - Buy and Sell High-Quality Photos",
+  description: "A marketplace for digital photos",
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className={inter.className}>
-        <div className="noise-bg" />
-        <CustomCursor />
-        {children}
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-gray-50">
+        <Navbar />
+        <main className="flex-1">{children}</main>
       </body>
     </html>
-  )
+  );
 }
