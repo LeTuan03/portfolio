@@ -4,7 +4,7 @@ import { Mail, MapPin, Send, CheckCircle, AlertCircle, Phone } from 'lucide-reac
 import ScrollReveal from '@/components/ui/ScrollReveal'
 
 // Thay thế URL này bằng Web App URL từ Google Apps Script của bạn
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz6zOh-De2Cl52rCIeSzJLnxq4IM0kvDueF_jPnDzI_Le1-h7hN5XBtZn-Mo0-VeWZR/exec'
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwNTDvfwdZPNIqxC0l5OOwRYizzccaoE1YO0eVCTfwer_AiDhIJMgXvNKD52Nxtqo8D/exec'
 
 export default function Contact() {
     const [formData, setFormData] = useState({
