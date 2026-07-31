@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Scene from '@/components/3d/Scene'
-import { ArrowRight, Download } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function Hero() {
     return (
@@ -17,7 +17,7 @@ export default function Hero() {
                         className="mb-6 relative"
                     >
                         <h1 className="text-[15vw] leading-[0.8] font-bold font-heading tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/50 mix-blend-overlay select-none">
-                            TUAN LE
+                            TUAN LV
                         </h1>
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 z-20" />
                     </motion.div>
@@ -37,16 +37,12 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.6 }}
                         className="flex flex-col md:flex-row items-center justify-center gap-4"
                     >
-                        <button className="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
+                        <a href="#projects" className="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
                             <span className="relative z-10 flex items-center gap-2">
                                 View Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </span>
                             <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </button>
-
-                        <button className="group px-8 py-4 border border-white/20 rounded-full font-medium hover:bg-white/5 transition-colors flex items-center gap-2">
-                            Resume <Download className="w-4 h-4" />
-                        </button>
+                        </a>
                     </motion.div>
                 </div>
             </div>

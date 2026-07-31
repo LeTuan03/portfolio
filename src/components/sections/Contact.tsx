@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, MapPin, Send, CheckCircle, AlertCircle, Phone } from 'lucide-react'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 
 // Thay thế URL này bằng Web App URL từ Google Apps Script của bạn
@@ -56,7 +55,7 @@ export default function Contact() {
     }
 
     return (
-        <section className="py-32 relative z-10">
+        <section id="contact" className="py-32 relative z-10-1">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <ScrollReveal>
@@ -68,6 +67,15 @@ export default function Contact() {
                         </p>
 
                         <div className="space-y-6">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-accent">
+                                    <Phone className="w-5 h-5" />
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-500">Phone</p>
+                                    <p className="text-lg font-medium">+84 383 847 128</p>
+                                </div>
+                            </div>
                             <div className="flex items-center gap-4">
                                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-accent">
                                     <Mail className="w-5 h-5" />
@@ -84,7 +92,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500">Location</p>
-                                    <p className="text-lg font-medium">Ha Noi, Viet Nam</p>
+                                    <p className="text-lg font-medium">Thanh Xuan, Ha Noi, Viet Nam</p>
                                 </div>
                             </div>
                         </div>

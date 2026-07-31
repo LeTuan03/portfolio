@@ -15,9 +15,10 @@ export default function Navbar() {
             </div>
 
             <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest">
-                <a href="#" className="hover:text-gray-300 transition-colors">WORK</a>
-                <a href="#" className="hover:text-gray-300 transition-colors">ABOUT</a>
-                <a href="#" className="hover:text-gray-300 transition-colors">CONTACT</a>
+                <a href="/" className="hover:text-gray-300 transition-colors">HOME</a>
+                <a href="#projects" className="hover:text-gray-300 transition-colors">PROJECTS</a>
+                <a href="#services" className="hover:text-gray-300 transition-colors">SERVICES</a>
+                <a href="#contact" className="hover:text-gray-300 transition-colors">CONTACT</a>
             </div>
 
             <button className="md:hidden">

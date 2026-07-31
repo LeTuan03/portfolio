@@ -5,6 +5,8 @@ import Projects from '@/components/sections/Projects'
 import Experience from '@/components/sections/Experience'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/ui/Footer'
+import Portfolio from '@/components/ui/Portfolio'
+import Services from '@/components/ui/Services'
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Portfolio />
+      <Services />
       <Projects />
       <Experience />
       <Contact />

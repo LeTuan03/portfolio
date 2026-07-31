@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 
@@ -29,7 +28,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section className="py-32 relative z-10">
+        <section className="py-32 relative z-10-1">
             <div className="container mx-auto px-4">
                 <ScrollReveal className="mb-16">
                     <h2 className="text-4xl md:text-6xl font-bold font-heading mb-4">
