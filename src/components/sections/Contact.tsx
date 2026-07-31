@@ -10,6 +10,7 @@ export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phone: '',
         message: ''
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -39,7 +40,7 @@ export default function Contact() {
 
             // With no-cors mode, we can't read the response, so we assume success
             setSubmitStatus('success')
-            setFormData({ name: '', email: '', message: '' })
+            setFormData({ name: '', email: '', phone: '', message: '' })
 
             // Reset success message after 5 seconds
             setTimeout(() => setSubmitStatus('idle'), 5000)
@@ -123,6 +124,19 @@ export default function Contact() {
                                     required
                                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors"
                                     placeholder="your.email@example.com"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-medium text-gray-400 mb-2">Phone number</label>
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors"
+                                    placeholder="your phone number"
                                 />
                             </div>
 
