@@ -31,7 +31,7 @@ export default function Navbar() {
                 } text-white`}
             >
                 <a href="/" className="text-lg font-bold font-heading tracking-widest">
-                    TUAN LV
+                    TUAN'S PORTFOLIO
                 </a>
 
                 <div className="hidden md:flex items-center gap-10 text-sm font-medium tracking-widest">
